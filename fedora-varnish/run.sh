@@ -2,7 +2,13 @@
 
 set -e
 
-source /etc/varnish/varnish.params
+source /srv/varnish.params
+
+if [ ! -f ${VARNISH_SECRET_FILE} ] ; then
+	mkdir -p $(dirname ${VARNISH_SECRET_FILE})
+	uuidgen > ${VARNISH_SECRET_FILE}
+	echo "Generataed a new ${VARNISH_SECRET_FILE}"
+fi
 
 /usr/sbin/varnishd \
 	-F \
