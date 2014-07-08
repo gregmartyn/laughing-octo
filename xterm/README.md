@@ -1,10 +1,10 @@
-# xterm contianer!
+# xterm container!
 
 ## Building
 
 	$> make build
 
-Since the contianer maps user name and UID into the image, the Dockerfile.sh is used to generate the Dockerfile.
+Since the container maps user name and UID into the image, the Dockerfile.sh is used to generate the Dockerfile.
 
 ## Running
 
