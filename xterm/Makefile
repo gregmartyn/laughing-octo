@@ -31,3 +31,7 @@ run: build
 		$(IMAGE) \
 		$(COMMAND)
 
+
+clean:
+	rm -rf *~ Dockerfile
+
